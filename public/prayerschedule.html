@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Prayer Times | Islamic Society of Lawrence</title>
+    <link rel="stylesheet" href="Semantic/semantic.min.css">
+    <link rel="stylesheet" href="css/custom/main.css">
+    <script src="Semantic/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/external/vue.min.js"></script>
+</head>
+</head>
+
+<body class="ui grid container">
+    <div class="centered row">
+        <br>
+        <h3 class="ui center aligned header">
+        Prayer schedule for {{month}} {{year}}
+      </h3>
+
+    </div>
+
+
+    <table class="ui celled table">
+        <thead>
+
+            <tr>
+                <th></th>
+                <th>Fajr</th>
+                <th>Sunrise</th>
+                <th>Zuhr</th>
+                <th>Asr</th>
+                <th>Sunset</th>
+                <th>Maghrib</th>
+                <th>Isha</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="d in prayertimes.data">
+                <td>{{d.date.readable}}</td>
+                <td v-for="t in d.timings">{{t}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+  
+</body>
+<script src="js/prayertimes.js"></script>
+
+</html>
