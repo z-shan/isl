@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Islamic Center of Lawrence</title>
+    <link rel="stylesheet" href="Semantic/semantic.min.css">
+    <link rel="stylesheet" href="css/custom/main.css">
+
+    <script src="Semantic/semantic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+    <script src="js/external/vue.min.js"></script>
+
+</head>
+
+<body class="ui grid">
+
+    <!--navigation bar-->
+
+    <div class="row">
+
+        <div id="navigationbar_landing" class="ui top fixed menu">
+            <img src="img/ICL_logo.jpg" height="40" />
+
+            <div class="right menu">
+
+                <!-- <a class="item" href="#">About Islam</a>
+            <a class="item" href="#">About ISL</a> -->
+                <a class="item" href="#">Welcome</a>
+                <a class="item" href="#timingsandannouncements" v-on:click="scroll_ann">Announcements and Prayer Timings</a>
+                <a class="item" href="#contactus">Contact us</a>
+                <!-- <a class="item" href="#">Islamic Center Tours</a>
+            <a class="item" href="#">Events and Announcements</a>
+            <a class="item" href="#">Getting Started in Lawrence</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row centered"  id="banner">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br><br><br>
+  
+    </div>
+
+    <!--content-->
+
+    <!--Screen 1-->
+    <!--
+    <div class="ui two column stackable row">
+
+        <div class="column" id="WelcomeISL_Landing">
+          <div class="segment">
+            <div class="ui fluid card" id="mycard">
+                <div class="content">
+                    <div class="header"> Welcome to the Islamic Center of Lawrence</div>
+                    <div class="description">
+                        The Islamic Center of Lawrence was established in the 90's
+                    </div>
+                </div>
+                <div class="extra content">
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column" id="IntroIslam_Landing">
+            <div class="ui fluid card">
+                <div class="content">
+                    <div class="header"> What is Islam?</div>
+                    <div class="description">
+
+                    </div>
+                </div>
+                <div class="extra content">
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </div> -->
+
+    <!--Screen 2 Announcements and  Prayer Timings -->
+    <div class="ui two column stackable row" id="timingsandannouncements">
+        <div class="column">
+            <h3 class="ui center aligned red header">Announcements</h3>
+            <div class="ui message">
+                Eid-ul-Azha will be observed on September 12th, 2016. Prayer will be at 8:00 am.
+            </div>
+           <div class="ui message">
+                There will be iftar at the masjid on Sunday, 11th September. 
+            </div>
+        </div>
+
+
+        <div class="column" id="a123">
+            <div class="row" id="timingsTable">
+
+                <h3 class="ui center aligned blue header">Prayer Timings</h3>
+                <p>
+
+                </p>
+                <table class="ui celled table">
+
+                    <tr>
+                        <th></th>
+                        <th>Fajr</th>
+                        <th>Sunrise</th>
+                        <th>Zuhr</th>
+                        <th>Asr</th>
+                        <th>Sunset</th>
+                        <th>Maghrib</th>
+                        <th>Isha</th>
+                    </tr>
+                    <tr>
+                        <td>Starting</td>
+                        <td v-for="t in prayertimes.data.timings">
+                            {{t}}
+                        </td>
+
+                    </tr>
+
+
+
+                </table>
+                <pre>
+                  {{$data|json}}
+                </pre>
+            </div>
+            <div class="row black">
+                
+                 <a href="prayerschedule.html">Click here for more timings</a>
+                <!--% link_to 'prayertimingws', controller: 'welcome' %-->
+            </div>
+        </div>
+    </div>
+
+    <!--Screen - Contact us-->
+
+
+
+    <div class="centered row">
+        <h3 class="ui center header">Contact US</h3>
+    </div>
+    <div class="six wide column">
+
+    </div>
+    <div class="four wide column">
+
+        <div class="ui items">
+            <div class="item">
+                <i class="call icon"></i>
+                <div class="content">
+                    (785) 749-1638
+                </div>
+            </div>
+
+            <div class="item">
+                <i class="marker icon"></i>
+                <div class="content">
+                    1917 Naismith Drive, Lawrence, KS 66046
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+<!--footer-->
+
+<script src="js/main.js"></script>
+
+</html>

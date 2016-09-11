@@ -16,6 +16,7 @@ $.ajax({
     })
     .done(function(data) {
       //  alert(data);
+      
 
         new Vue({
             el: 'body',
